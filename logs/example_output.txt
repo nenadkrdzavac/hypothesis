@@ -1,0 +1,69 @@
+------------------------------------------------------------
+Kurepa's Left Factorial: A Guided Lean Demonstration
+------------------------------------------------------------
+Short introduction.
+This file presents a few exact computations around the left factorial and Kurepa's hypothesis.
+The aim is explanatory: each computation is accompanied by a brief mathematical interpretation.
+
+Example 1: initial values of the left factorial.
+We begin by recalling the definition of the left factorial.
+By definition, !n is the sum of i! for 0 ≤ i < n.
+These small values make the definition concrete.
+For n = 0, the left factorial !n is 0.
+For n = 1, the left factorial !n is 1.
+For n = 2, the left factorial !n is 2.
+For n = 3, the left factorial !n is 4.
+For n = 4, the left factorial !n is 10.
+For n = 5, the left factorial !n is 34.
+Interpretation: the sequence begins 0, 1, 2, 4, 10, 34.
+This is only computation, but it makes the recurrence visible.
+
+Example 2: residues modulo n.
+Kurepa's hypothesis says that for every integer n > 2, the residue !n mod n is nonzero.
+For a prime p, computing !p mod p is a natural first test of the conjectural pattern.
+For n = 3, we compute !n mod n = 1, so the residue is nonzero: yes.
+For n = 5, we compute !n mod n = 4, so the residue is nonzero: yes.
+For n = 7, we compute !n mod n = 6, so the residue is nonzero: yes.
+Interpretation: in these cases the residue does not vanish.
+These examples illustrate the statement; they do not prove it for all integers or all primes.
+
+Example 3: bounded verification for a finite range.
+We now check the modular condition for every n from 3 through 10.
+Bounded verification means that one confirms a statement on a finite list of cases.
+This is useful evidence, but it is not a proof of the universal claim.
+For n = 3, we compute !n mod n = 1, so the residue is nonzero: yes.
+For n = 4, we compute !n mod n = 2, so the residue is nonzero: yes.
+For n = 5, we compute !n mod n = 4, so the residue is nonzero: yes.
+For n = 6, we compute !n mod n = 4, so the residue is nonzero: yes.
+For n = 7, we compute !n mod n = 6, so the residue is nonzero: yes.
+For n = 8, we compute !n mod n = 2, so the residue is nonzero: yes.
+For n = 9, we compute !n mod n = 1, so the residue is nonzero: yes.
+For n = 10, we compute !n mod n = 4, so the residue is nonzero: yes.
+Interpretation: each of these tested integers satisfies !n mod n ≠ 0.
+A finite computation can guide conjecture formation and later proof search.
+
+Example 4: the recurrence viewpoint.
+The recurrence ! (n + 1) = !n + n! lets us pass from one value to the next by adjoining a single factorial term.
+A recurrence state means the current value !n together with the next term n! that will be added.
+This viewpoint is useful because it suggests invariant properties that may later be proved formally.
+Starting from !4 = 10 and 4! = 24,
+the recurrence gives !5 = !4 + 4! = 10 + 24 = 34.
+Interpretation: the recurrence packages the sequence into a step-by-step structure.
+That structure is often the right place to look for congruences and invariants.
+
+Example 5: the gcd formulation.
+A commonly cited equivalent form says that for n > 1 one expects gcd(!n, n!) = 2.
+We compute a few small cases.
+For n = 2, gcd(!n, n!) = 2.
+For n = 3, gcd(!n, n!) = 2.
+For n = 4, gcd(!n, n!) = 2.
+For n = 5, gcd(!n, n!) = 2.
+For n = 6, gcd(!n, n!) = 2.
+For n = 7, gcd(!n, n!) = 2.
+Interpretation: the small cases match the expected value 2.
+Again, these are verified computations, not a general theorem.
+
+Closing summary.
+We have seen the definition, several exact values, residues modulo n, a finite verification range, and the recurrence step.
+These examples are relevant because they indicate patterns that may later be organized into lemmas, invariants, or a full proof.
+The present file is a guided computational demonstration; it does not claim a proof of Kurepa's hypothesis.
