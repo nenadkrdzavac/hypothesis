@@ -5,6 +5,9 @@ open Lake DSL
 package hypothesis where
   moreLeanArgs := #["-T1000"]
 
+require mathlib from git
+  "https://github.com/leanprover-community/mathlib4.git" @ "v4.15.0"
+
 @[default_target]
 lean_lib Hypothesis where
   roots := #[`Hypothesis]

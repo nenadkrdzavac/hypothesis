@@ -13,10 +13,10 @@ namespace Hypothesis.Kurepa
   simp [leftFactorial]
 
 @[simp] theorem leftFactorial_four : leftFactorial 4 = 10 := by
-  simp [leftFactorial]
+  native_decide
 
 @[simp] theorem leftFactorial_five : leftFactorial 5 = 34 := by
-  simp [leftFactorial]
+  native_decide
 
 /-- Recursive step, restated under a reusable name. -/
 theorem leftFactorial_step (n : Nat) :

@@ -7,8 +7,8 @@ example : leftFactorial 0 = 0 := by simp
 example : leftFactorial 1 = 1 := by simp
 example : leftFactorial 2 = 2 := by simp
 example : leftFactorial 3 = 4 := by simp
-example : leftFactorial 4 = 10 := by simp
-example : leftFactorial 5 = 34 := by simp
+example : leftFactorial 4 = 10 := by native_decide
+example : leftFactorial 5 = 34 := by native_decide
 
 example : leftFactorial 3 % 3 ≠ 0 := by native_decide
 example : leftFactorial 4 % 4 ≠ 0 := by native_decide

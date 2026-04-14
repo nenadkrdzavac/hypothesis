@@ -210,3 +210,7 @@ __marimo__/
 .elan/
 logs/*.jsonl
 !logs/.gitkeep
+
+
+# Lean dependencies
+.lake/
